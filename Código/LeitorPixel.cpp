@@ -63,7 +63,7 @@ void escreveArquivoSaida( string nomeArquivo, string aditivo, int *vetor, int ta
 	
 }
 
-int *geraArquivoAdptado( string nomeArquivo )
+int *geraArquivoAdptado( string nomeArquivo, int *tamanhoVetor )
 {
 	vector<int> pixels;
 	string nome = nomeArquivo;
@@ -127,12 +127,14 @@ int *geraArquivoAdptado( string nomeArquivo )
 	free( splitString );
 
 	escreveArquivoSaida( nome, aditivoNomeLinha, vetorPixels, pixels.size() );
+	*tamanhoVetor = pixels.size();
 	return vetorPixels;
 }
 
-/* PARA TESTES */
+/* PARA TESTES E EXEMPLO DE USO */
 /*int main()
 {
-	geraArquivoAdptado( "exemplo.dat" );
-	cout << "SUCESS" << endl;
+	int tamanhoVetor;
+	geraArquivoAdptado( "exemplo.dat", &tamanhoVetor );
+	cout << "SUCESS " << tamanhoVetor << endl;
 }*/
