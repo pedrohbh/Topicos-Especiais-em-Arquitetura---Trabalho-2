@@ -1,2 +1,0 @@
-all:
-	g++ -o codigo codigo.cpp `pkg-config --cflags opencv` `pkg-config --libs opencv`
