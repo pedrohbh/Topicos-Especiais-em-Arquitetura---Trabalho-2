@@ -1,0 +1,26 @@
+# especifica a qtd de amostrar que sera utilizada no teste
+
+test_iter: 100
+
+#realiza os testes a cada x interações
+test_interval: 200
+
+#base_lr: 0.0001
+display: 200
+
+base_lr: 0.0001
+lr_policy: "fixed"
+#stepsize: 100000
+#weight_decay: 0.0005
+gamma: 0.1
+
+max_iter: 30000
+
+#lr_policy: "fixed"
+
+#momentum: 0.9
+snapshot: 100
+snapshot_prefix: "snapshots/"
+solver_mode: GPU
+device_id: 0
+net: "deploy.prototxt"
