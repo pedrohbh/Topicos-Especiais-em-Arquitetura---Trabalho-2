@@ -49,6 +49,7 @@ int main()
 	
 	abreArquivo( nomeEntrada );
 
+	cout << endl << endl << "========================================Iniciando busca de arquivos contidos em \"" << nomeEntrada << "\"===================================================================" << endl << endl;
 	DIR *dp;
 	struct dirent *ep;
 
@@ -77,7 +78,7 @@ int main()
 		}
 		else
 		{
-			perror("Não foi possível abrir o diretóriolocal");
+			perror("Não foi possível abrir o especificado. Verifique se o mesmo existe");
 			exit( 0 );
 		}
 	}
@@ -85,6 +86,8 @@ int main()
 			cout << "Todos os arquivos de \"" << nomeEntrada << "\" foram encontrados com sucesso." << endl;
 
 		buscaGlobal = true;
+
+	cout << endl << endl << "===================================================================FIM BUSCA===============================================================================================================" << endl;
 	
 	/*dp = opendir("./");
 	if ( dp != NULL )
